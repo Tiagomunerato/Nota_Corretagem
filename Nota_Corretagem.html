@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset=utf-8>
+        <title>Exercício Corretagem</title>
+    
+    <style>
+        *{
+            font-family: Arial, sans-serif;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 300px;
+            }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+            }
+        button{
+            width: 460px;
+            color: white;
+            margin-top: 10px;
+            background-color: #5cb85c;
+            border: none;
+        }
+    </style>
+    <script>
+            function calcular(){
+                //entradas
+                var ticket = document.getElementById("ticket");
+                var quantidade = document.getElementById("quantidade");
+                var cv = document.getElementById("cv");
+                var valor = document.getElementById("valor");
+                
+                
+                
+                //processamento
+                var total = quantidade.value * valor.value;
+               
+                
+                //saídas
+                alert("O Ticket: " + ticket.value + "\n A Quantidade: " + quantidade.value +"\n O Identificador é:" + cv.value + "\nO valor ajusta foi: R$" + valor.value + "\nO total gasto foi: R$ " + total);
+            }
+        </script>
+        </head>
+    <body>
+        <h1>Corretagem</h1>
+        <table>
+            <tr>
+                <th>Ordens</th>
+                
+            </tr>
+            <tr>
+                <td>Ticket</td>
+                <td><input type="text" id="ticket"></td>
+                
+            </tr>
+            <tr>
+                <td>Quantidade</td>
+                <td><input type="text" id="quantidade"></td>
+                
+            </tr>
+            <tr>
+                <td>C/V</td>
+                <td><input type="text" id="cv"></td>
+                
+            </tr>
+            <tr>
+                <td>Valor Ajustado (R$)</td>
+                <td><input type="text" id="valor"></td>
+                
+            </tr>
+           
+            
+        </table>
+        <button onclick="calcular()">Calcular</button>
+    </body>
+</html>
